@@ -20,7 +20,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
+              "src/styles.less",
               "src/theme.less"
             ],
             "scripts": [],
@@ -114,7 +114,7 @@
             "karmaConfig": "src/karma.conf.js",
             "scripts": [],
             "styles": [
-              "src/styles.scss",
+              "src/styles.less",
               "src/theme.less"
             ],
             "assets": [

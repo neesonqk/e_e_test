@@ -1,1 +1,109 @@
-<router-outlet></router-outlet>
+<nz-layout class="app-layout">
+    <nz-sider class="menu-sidebar" nzCollapsible nzWidth="256px" nzBreakpoint="md" [(nzCollapsed)]="isCollapsed"
+        [nzTrigger]="null">
+        <div class="sidebar-logo">
+            <a href="https://ng.ant.design/" target="_blank">
+                <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+                <h1>Ordering System 2.0</h1>
+            </a>
+        </div>
+        <ul nz-menu nzTheme="light" nzMode="inline" [nzInlineCollapsed]="isCollapsed" ngClass="main-menu">
+            <li nz-submenu nzOpen nzTitle="Order" nzIcon="dashboard" nzMenuClassName="sub-menu">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>
+                        <a routerLink="/order/pending">Pending</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>History</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Quotation" nzIcon="dollar">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>
+                        <a routerLink="/quotation/management">Management</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Customer" nzIcon="customer-service">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Management</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Report</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Delivery" nzIcon="car">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Driver</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Vehicle</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Report</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Goods" nzIcon="shopping-cart">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Goods Group</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Management</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Category</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzOpen nzTitle="System" nzIcon="setting">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Settings</a>
+                    </li>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Logout</a>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="License" nzIcon="key" class="stylish">
+                <ul>
+                    <li nz-menu-item nzMatchRouter>
+                        <a>Check</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header class="nz-header-wrapper">
+            <div class="app-header">
+                <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
+                    <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+                </span>
+                <span>
+                    <button nz-button nzType="primary" nzDanger nzSize="default">New Order</button>
+                </span>
+                <div style="display: inline-block; margin-left: 15px;">
+                    <span class="header-sub-title">Pending Order(s): </span> <span class="header-sub-value">30</span>
+                </div>
+                <div style="float: right; line-height: 64px; margin-right: 15px;">
+                    <nz-avatar nzIcon="user" nzSrc="//zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"></nz-avatar>
+                </div>
+            </div>
+        </nz-header>
+        <nz-content>
+            <div class="inner-content">
+                <router-outlet></router-outlet>
+            </div>
+        </nz-content>
+        <nz-footer>
+            Honor Production from OXYMEN Global Pte. Ltd. (Singapore)
+        </nz-footer>
+    </nz-layout>
+</nz-layout>

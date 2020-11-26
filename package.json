@@ -1,11 +1,11 @@
 {
-    "name": "angular-electron",
+    "name": "oxymen-order-sys",
     "version": "8.0.5",
-    "description": "Angular 10 with Electron (Typescript + SASS + Hot Reload)",
-    "homepage": "https://github.com/maximegris/angular-electron",
+    "description": "OXYMEN Order System 2.0",
+    "homepage": "https://oxymen.tech",
     "author": {
-        "name": "Maxime GRIS",
-        "email": "maxime.gris@gmail.com"
+        "name": "Neeson",
+        "email": "neeson.z@outlook.com"
     },
     "keywords": [
         "angular",
